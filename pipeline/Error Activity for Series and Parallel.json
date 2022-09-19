@@ -6,7 +6,11 @@
 				"name": "Set variable1",
 				"type": "SetVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "s",
+					"value": "g"
+				}
 			},
 			{
 				"name": "Set variable2",
@@ -19,7 +23,11 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "d",
+					"value": "d"
+				}
 			},
 			{
 				"name": "Set variable3",
@@ -32,25 +40,41 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "df",
+					"value": "l\n"
+				}
 			},
 			{
 				"name": "Set variable4",
 				"type": "SetVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "s",
+					"value": "f"
+				}
 			},
 			{
 				"name": "Set variable5",
 				"type": "SetVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "d",
+					"value": "f"
+				}
 			},
 			{
 				"name": "Set variable6",
 				"type": "SetVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "df",
+					"value": "fd\n"
+				}
 			},
 			{
 				"name": "Wait1",
@@ -116,7 +140,7 @@
 				"typeProperties": {
 					"variableName": "Error Capture Prallel",
 					"value": {
-						"value": "@concat(activity('Set variable1')?.Error?.message,'|',activity('Set variable2')?.Error?.message,'|',activity('Set variable3')?.Error?.message)",
+						"value": "@concat(activity('Set variable4')?.Error?.message,'|',activity('Set variable5')?.Error?.message,'|',activity('Set variable6')?.Error?.message)",
 						"type": "Expression"
 					}
 				}
@@ -127,6 +151,15 @@
 				"type": "String"
 			},
 			"Error Capture Prallel": {
+				"type": "String"
+			},
+			"s": {
+				"type": "String"
+			},
+			"d": {
+				"type": "String"
+			},
+			"df": {
 				"type": "String"
 			}
 		},
