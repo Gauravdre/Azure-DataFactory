@@ -34,7 +34,7 @@
 				"type": "SetVariable",
 				"dependsOn": [
 					{
-						"activity": "Set variable2",
+						"activity": "Fail1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -143,6 +143,23 @@
 						"value": "@concat(activity('Set variable4')?.Error?.message,'|',activity('Set variable5')?.Error?.message,'|',activity('Set variable6')?.Error?.message)",
 						"type": "Expression"
 					}
+				}
+			},
+			{
+				"name": "Fail1",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "Set variable2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "gsdfkg",
+					"errorCode": "54161"
 				}
 			}
 		],
