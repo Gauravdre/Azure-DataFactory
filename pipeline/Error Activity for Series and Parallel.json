@@ -26,7 +26,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "d",
-					"value": "1"
+					"value": "[3,4,5]"
 				}
 			},
 			{
@@ -63,7 +63,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "d",
-					"value": "2"
+					"value": "[3,4,5]"
 				}
 			},
 			{
