@@ -33,7 +33,7 @@
 				}
 			},
 			{
-				"name": "Filter Files based on name",
+				"name": "Filter",
 				"type": "Filter",
 				"dependsOn": [
 					{
@@ -46,11 +46,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.childItems",
+						"value": "@activity('Get Metadata1').output.childItems.name",
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@startswith(activity('Get Metadata1').output.itemName,'Emp.txt')",
+						"value": "@not(item().name,'Emp.txt'))",
 						"type": "Expression"
 					}
 				}
@@ -60,7 +60,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Filter Files based on name",
+						"activity": "Filter",
 						"dependencyConditions": [
 							"Skipped"
 						]
@@ -69,7 +69,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.itemName",
+						"value": "@activity('Get Metadata1').output.childItems.Name\r\n",
 						"type": "Expression"
 					},
 					"isSequential": true,
